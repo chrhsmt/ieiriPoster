@@ -2833,3 +2833,11 @@ Processing by DataController#download as CSV
   Rendered text template (0.0ms)
 Sent data  (0.9ms)
 Completed 200 OK in 1291ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 17:43:01 +0900
+Processing by DataController#download as CSV
+  Parameters: {"date"=>"2014/01/28"}
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 1333ms (Views: 0.4ms | ActiveRecord: 0.0ms)
