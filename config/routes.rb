@@ -3,6 +3,8 @@ IeiriPoster::Application.routes.draw do
   get 'data/index' => 'data#index'
   post 'data/download(.:format)' => 'data#download'
 
+  root 'index#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

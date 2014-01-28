@@ -2841,3 +2841,118 @@ Processing by DataController#download as CSV
   Rendered text template (0.0ms)
 Sent data  (0.5ms)
 Completed 200 OK in 1333ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-28 18:26:14 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 31ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-28 18:26:46 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-28 18:26:47 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-28 18:27:17 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 28ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-28 18:28:28 +0900
+
+ArgumentError (missing :action):
+  config/routes.rb:6:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-28 18:28:48 +0900
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 282ms (Views: 264.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-28 18:28:49 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 18:28:49 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 18:28:49 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-28 18:28:49 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-28 18:28:49 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 18:28:49 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 18:28:49 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-28 18:28:49 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 18:28:49 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 18:28:49 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-28 18:30:16 +0900
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 72ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 18:30:16 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 18:30:16 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-28 18:30:16 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 18:30:16 +0900
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-28 18:30:16 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 18:30:16 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 18:30:16 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-28 18:30:16 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-28 18:30:16 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 18:30:16 +0900
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 18:30:19 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms)
