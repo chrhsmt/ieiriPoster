@@ -17,10 +17,10 @@ class DataController < ApplicationController
 	json = JSON.parser.new(open(url).read)
 
   	# generate csv data
-  	header = %w(エリア 地名 設置場所)
+  	header = %w(エリア 住所 住所詳細)
   	csvData = CSV.generate(headers: header, write_headers: true, force_quotes: true) do | csv | 
 		json.parse['issues'].each do | issue | 
-			csv << [issue['category']['name'], issue['subject'], issue['description']] #, issue['geometry']["coordinates"]
+			csv << [issue['category']['name'], issue['description'], issue['subject']] #, issue['geometry']["coordinates"]
 		end  		
   	end
   	csvData.encode(Encoding::SJIS)
