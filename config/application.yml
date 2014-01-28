@@ -1,0 +1,13 @@
+defaults: &defaults
+
+  shirasete_api:
+    open_issues: http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=close&key=<%= "#{ENV['OSHIETE_API_KEY']}" %>
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
