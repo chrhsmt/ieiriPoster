@@ -32,7 +32,7 @@ class DataController < ApplicationController
 		(0..(loopCount - 1)).each do | count |
 
 		  	# call api
-		  	url = Settings.shirasete_api.open_issues + urlParam + "&limit=#{LIMIT}&offset=#{count * LIMIT}"
+		  	url = Settings.shirasete_api.open_issues + urlParam + "&limit=#{LIMIT}&offset=#{count * LIMIT}&sort=category,id"
 		  	logger.debug url
 			json = JSON.parser.new(open(url).read)
 
