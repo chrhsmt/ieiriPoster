@@ -1,0 +1,6 @@
+<h1>ポスター未貼付データCSVダウンロード</h1>
+
+<form action="<%= url_for controller: 'data', action: 'download', format: :csv %>" method="POST">
+  <input type="text" name="date" value="<%= Time.now.strftime('%Y/%m/%d') %>" /><br />
+  <input type="submit" value="ダウンロード" />
+</form>
