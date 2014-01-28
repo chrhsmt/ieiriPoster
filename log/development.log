@@ -2956,3 +2956,1731 @@ Started GET "/data/index" for 127.0.0.1 at 2014-01-28 18:30:19 +0900
 Processing by DataController#index as HTML
   Rendered data/index.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:12:02 +0900
+Processing by DataController#index as HTML
+Completed 500 Internal Server Error in 1520ms
+
+NoMethodError (undefined method `[]' for #<JSON::Ext::Parser:0x00000101603568>):
+  app/controllers/data_controller.rb:12:in `index'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.4ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:13:14 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 819ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 19:13:14 +0900
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-28 19:13:15 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-28 19:13:15 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 19:13:15 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 19:13:15 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 19:13:15 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 19:13:15 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-28 19:13:15 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-28 19:13:15 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 19:13:15 +0900
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:21:57 +0900
+Processing by DataController#index as HTML
+ERROR: compiling _app_views_data_index_html_erb___3471650994289487988_2174178320 RAISED /Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:4: syntax error, unexpected ')', expecting =>
+...map{|t| [t["name"], t["id"]]} );@output_buffer.safe_append='
+...                               ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:10: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_data_index_html_erb___3471650994289487988_2174178320(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "data/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>ポスター未貼付データCSVダウンロード</h1>
+
+<form action="';@output_buffer.append=( url_for controller: 'data', action: 'download', format: :csv );@output_buffer.safe_append='" method="POST">
+  ';@output_buffer.append=( select :page, :name => 'category', @categories.map{|t| [t["name"], t["id"]]} );@output_buffer.safe_append='
+  <input type="text" name="date" value="';@output_buffer.append=( Time.now.strftime('%Y/%m/%d') );@output_buffer.safe_append='" /> <- 要らない？ <br />
+  <input type="submit" value="ダウンロード" />
+</form>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `module_eval'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `compile'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:248:in `block in compile!'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `synchronize'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `compile!'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:142:in `block in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:161:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:141:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:403:in `_run__1282703890981346001__process_action__callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:136:in `process'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal.rb:231:in `block in action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/query_cache.rb:36:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/migration.rb:369:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:373:in `_run__3313526131724120180__call__callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/engine.rb:511:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/application.rb:97:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered data/index.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 1029ms
+
+ActionView::Template::Error (/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:4: syntax error, unexpected ')', expecting =>
+...map{|t| [t["name"], t["id"]]} );@output_buffer.safe_append='
+...                               ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:10: syntax error, unexpected keyword_end, expecting ')'):
+    1: <h1>ポスター未貼付データCSVダウンロード</h1>
+    2: 
+    3: <form action="<%= url_for controller: 'data', action: 'download', format: :csv %>" method="POST">
+    4:   <%= select :page, :name => 'category', @categories.map{|t| [t["name"], t["id"]]} %>
+    5:   <input type="text" name="date" value="<%= Time.now.strftime('%Y/%m/%d') %>" /> <- 要らない？ <br />
+    6:   <input type="submit" value="ダウンロード" />
+    7: </form>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__1282703890981346001__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__3313526131724120180__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.9ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:23:01 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 1029ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 19:23:02 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-28 19:23:02 +0900
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-28 19:23:02 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 19:23:02 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:02 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:02 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:02 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:02 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:02 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:02 +0900
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:23:23 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 882ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 19:23:24 +0900
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-28 19:23:24 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:24 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 19:23:24 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-28 19:23:24 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:24 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:24 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:24 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:24 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:24 +0900
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:23:51 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 891ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 19:23:52 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 19:23:52 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-28 19:23:52 +0900
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-28 19:23:52 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:52 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:52 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:52 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:52 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:52 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 19:23:52 +0900
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 19:23:55 +0900
+Processing by DataController#download as CSV
+  Parameters: {"page"=>{"category"=>"all"}}
+  Rendered text template (0.0ms)
+Sent data  (4.3ms)
+Completed 200 OK in 860ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 19:24:07 +0900
+Processing by DataController#download as CSV
+  Parameters: {"page"=>{"category"=>"all"}}
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 998ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 19:24:41 +0900
+Processing by DataController#download as CSV
+  Parameters: {"page"=>{"category"=>"all"}}
+  Rendered text template (0.0ms)
+Sent data  (1.2ms)
+Completed 200 OK in 844ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:25:08 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 935ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 19:25:09 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 19:25:09 +0900
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-28 19:25:09 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-28 19:25:09 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 19:25:09 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 19:25:09 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 19:25:09 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-28 19:25:09 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-28 19:25:09 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 19:25:09 +0900
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:26:11 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 903ms
+
+ActionView::Template::Error (wrong number of arguments (4 for 5..7)):
+    1: <h1>ポスター未貼付データCSVダウンロード</h1>
+    2: 
+    3: <form action="<%= url_for controller: 'data', action: 'download', format: :csv %>" method="POST">
+    4:   <%= collection_select 'category', @categories, :name , :id %>
+    5:   <!-- <input type="text" name="date" value="<%= Time.now.strftime('%Y/%m/%d') %>" /> <- 要らない？ <br /> -->
+    6:   <input type="submit" value="ダウンロード" />
+    7: </form>
+  app/views/data/index.html.erb:4:in `_app_views_data_index_html_erb___3471650994289487988_2173536380'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.5ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:26:51 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 844ms
+
+ActionView::Template::Error (wrong number of arguments (4 for 5..7)):
+    1: <h1>ポスター未貼付データCSVダウンロード</h1>
+    2: 
+    3: <form action="<%= url_for controller: 'data', action: 'download', format: :csv %>" method="POST">
+    4:   <%= collection_select( 'category', @categories, "name" , "id") %>
+    5:   <!-- <input type="text" name="date" value="<%= Time.now.strftime('%Y/%m/%d') %>" /> <- 要らない？ <br /> -->
+    6:   <input type="submit" value="ダウンロード" />
+    7: </form>
+  app/views/data/index.html.erb:4:in `_app_views_data_index_html_erb___3471650994289487988_2156593900'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.7ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:28:58 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 895ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 19:28:59 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-28 19:28:59 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 19:28:59 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 19:28:59 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 19:28:59 +0900
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-28 19:28:59 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 19:28:59 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-28 19:28:59 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-28 19:28:59 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 19:28:59 +0900
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:29:43 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 747ms
+
+ActionView::Template::Error (undefined method `name' for {"name"=>"全体", "id"=>"all"}:Hash):
+    1: <h1>ポスター未貼付データCSVダウンロード</h1>
+    2: 
+    3: <form action="<%= url_for controller: 'data', action: 'download', format: :csv %>" method="POST">
+    4:   <%= select_tag 'category', options_from_collection_for_select(@categories, :id, :name) %>
+    5:   <!-- <input type="text" name="date" value="<%= Time.now.strftime('%Y/%m/%d') %>" /> <- 要らない？ <br /> -->
+    6:   <input type="submit" value="ダウンロード" />
+    7: </form>
+  app/views/data/index.html.erb:4:in `_app_views_data_index_html_erb___3471650994289487988_2173539780'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.3ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:30:14 +0900
+Processing by DataController#index as HTML
+ERROR: compiling _app_views_data_index_html_erb___3471650994289487988_2156364980 RAISED /Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._select(@categories, "id, "name") );@output_buffer.safe_appe...
+...                               ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+  <!-- <input type="text" name="date" value="';@outpu...
+                        ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+...- <input type="text" name="date" value="';@output_buffer.app...
+...                               ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:5: unknown type of %string
+...end=( Time.now.strftime('%Y/%m/%d') );@output_buffer.safe_ap...
+...                               ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:5: syntax error, unexpected end-of-input
+...end=( Time.now.strftime('%Y/%m/%d') );@output_buffer.safe_ap...
+...                               ^
+Function body:           def _app_views_data_index_html_erb___3471650994289487988_2156364980(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "data/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>ポスター未貼付データCSVダウンロード</h1>
+
+<form action="';@output_buffer.append=( url_for controller: 'data', action: 'download', format: :csv );@output_buffer.safe_append='" method="POST">
+  ';@output_buffer.append=( select_tag 'category', options_from_collection_for_select(@categories, "id, "name") );@output_buffer.safe_append='
+  <!-- <input type="text" name="date" value="';@output_buffer.append=( Time.now.strftime('%Y/%m/%d') );@output_buffer.safe_append='" /> <- 要らない？ <br /> -->
+  <input type="submit" value="ダウンロード" />
+</form>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `module_eval'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `compile'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:248:in `block in compile!'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `synchronize'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `compile!'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:142:in `block in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:161:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:141:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:403:in `_run__1282703890981346001__process_action__callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:136:in `process'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal.rb:231:in `block in action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/query_cache.rb:36:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/migration.rb:369:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:373:in `_run__3313526131724120180__call__callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/engine.rb:511:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/application.rb:97:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered data/index.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 865ms
+
+ActionView::Template::Error (/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+..._select(@categories, "id, "name") );@output_buffer.safe_appe...
+...                               ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+  <!-- <input type="text" name="date" value="';@outpu...
+                        ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+...- <input type="text" name="date" value="';@output_buffer.app...
+...                               ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:5: unknown type of %string
+...end=( Time.now.strftime('%Y/%m/%d') );@output_buffer.safe_ap...
+...                               ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:5: syntax error, unexpected end-of-input
+...end=( Time.now.strftime('%Y/%m/%d') );@output_buffer.safe_ap...
+...                               ^):
+    1: <h1>ポスター未貼付データCSVダウンロード</h1>
+    2: 
+    3: <form action="<%= url_for controller: 'data', action: 'download', format: :csv %>" method="POST">
+    4:   <%= select_tag 'category', options_from_collection_for_select(@categories, "id, "name") %>
+    5:   <!-- <input type="text" name="date" value="<%= Time.now.strftime('%Y/%m/%d') %>" /> <- 要らない？ <br /> -->
+    6:   <input type="submit" value="ダウンロード" />
+    7: </form>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__1282703890981346001__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__3313526131724120180__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.6ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:31:32 +0900
+Processing by DataController#index as HTML
+ERROR: compiling _app_views_data_index_html_erb___3471650994289487988_2157030860 RAISED /Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:4: syntax error, unexpected ',', expecting '='
+...ategories.map {|m| m["name"], ,["id"]}) );@output_buffer.saf...
+...                               ^
+Function body:           def _app_views_data_index_html_erb___3471650994289487988_2157030860(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "data/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>ポスター未貼付データCSVダウンロード</h1>
+
+<form action="';@output_buffer.append=( url_for controller: 'data', action: 'download', format: :csv );@output_buffer.safe_append='" method="POST">
+  ';@output_buffer.append=( select_tag 'category', options_for_select(@categories.map {|m| m["name"], ,["id"]}) );@output_buffer.safe_append='
+  <!-- <input type="text" name="date" value="';@output_buffer.append=( Time.now.strftime('%Y/%m/%d') );@output_buffer.safe_append='" /> <- 要らない？ <br /> -->
+  <input type="submit" value="ダウンロード" />
+</form>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `module_eval'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `compile'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:248:in `block in compile!'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `synchronize'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `compile!'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:142:in `block in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:161:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:141:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:403:in `_run__1282703890981346001__process_action__callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:136:in `process'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal.rb:231:in `block in action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/query_cache.rb:36:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/migration.rb:369:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:373:in `_run__3313526131724120180__call__callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/engine.rb:511:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/application.rb:97:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered data/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 986ms
+
+ActionView::Template::Error (/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:4: syntax error, unexpected ',', expecting '='
+...ategories.map {|m| m["name"], ,["id"]}) );@output_buffer.saf...
+...                               ^):
+    1: <h1>ポスター未貼付データCSVダウンロード</h1>
+    2: 
+    3: <form action="<%= url_for controller: 'data', action: 'download', format: :csv %>" method="POST">
+    4:   <%= select_tag 'category', options_for_select(@categories.map {|m| m["name"], ,["id"]}) %>
+    5:   <!-- <input type="text" name="date" value="<%= Time.now.strftime('%Y/%m/%d') %>" /> <- 要らない？ <br /> -->
+    6:   <input type="submit" value="ダウンロード" />
+    7: </form>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__1282703890981346001__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__3313526131724120180__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.0ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:31:40 +0900
+Processing by DataController#index as HTML
+ERROR: compiling _app_views_data_index_html_erb___3471650994289487988_2158779860 RAISED /Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:4: syntax error, unexpected '}', expecting :: or '[' or '.'
+...ies.map {|m| m["name"] ,["id"]}) );@output_buffer.safe_appen...
+...                               ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:10: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _app_views_data_index_html_erb___3471650994289487988_2158779860(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "data/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>ポスター未貼付データCSVダウンロード</h1>
+
+<form action="';@output_buffer.append=( url_for controller: 'data', action: 'download', format: :csv );@output_buffer.safe_append='" method="POST">
+  ';@output_buffer.append=( select_tag 'category', options_for_select(@categories.map {|m| m["name"] ,["id"]}) );@output_buffer.safe_append='
+  <!-- <input type="text" name="date" value="';@output_buffer.append=( Time.now.strftime('%Y/%m/%d') );@output_buffer.safe_append='" /> <- 要らない？ <br /> -->
+  <input type="submit" value="ダウンロード" />
+</form>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `module_eval'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `compile'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:248:in `block in compile!'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `synchronize'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `compile!'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:142:in `block in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:161:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:141:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:403:in `_run__1282703890981346001__process_action__callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:136:in `process'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal.rb:231:in `block in action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/query_cache.rb:36:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/migration.rb:369:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:373:in `_run__3313526131724120180__call__callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/engine.rb:511:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/application.rb:97:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered data/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 830ms
+
+ActionView::Template::Error (/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:4: syntax error, unexpected '}', expecting :: or '[' or '.'
+...ies.map {|m| m["name"] ,["id"]}) );@output_buffer.safe_appen...
+...                               ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:10: syntax error, unexpected keyword_end, expecting '}'):
+    1: <h1>ポスター未貼付データCSVダウンロード</h1>
+    2: 
+    3: <form action="<%= url_for controller: 'data', action: 'download', format: :csv %>" method="POST">
+    4:   <%= select_tag 'category', options_for_select(@categories.map {|m| m["name"] ,["id"]}) %>
+    5:   <!-- <input type="text" name="date" value="<%= Time.now.strftime('%Y/%m/%d') %>" /> <- 要らない？ <br /> -->
+    6:   <input type="submit" value="ダウンロード" />
+    7: </form>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__1282703890981346001__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__3313526131724120180__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.8ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:31:49 +0900
+Processing by DataController#index as HTML
+ERROR: compiling _app_views_data_index_html_erb___3471650994289487988_2190573460 RAISED /Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:4: syntax error, unexpected '}', expecting '='
+...es.map {|m| m["name"], m["id"]}) );@output_buffer.safe_appen...
+...                               ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:10: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _app_views_data_index_html_erb___3471650994289487988_2190573460(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "data/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>ポスター未貼付データCSVダウンロード</h1>
+
+<form action="';@output_buffer.append=( url_for controller: 'data', action: 'download', format: :csv );@output_buffer.safe_append='" method="POST">
+  ';@output_buffer.append=( select_tag 'category', options_for_select(@categories.map {|m| m["name"], m["id"]}) );@output_buffer.safe_append='
+  <!-- <input type="text" name="date" value="';@output_buffer.append=( Time.now.strftime('%Y/%m/%d') );@output_buffer.safe_append='" /> <- 要らない？ <br /> -->
+  <input type="submit" value="ダウンロード" />
+</form>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `module_eval'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `compile'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:248:in `block in compile!'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `synchronize'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `compile!'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:142:in `block in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:161:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/template.rb:141:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:403:in `_run__1282703890981346001__process_action__callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:136:in `process'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_controller/metal.rb:231:in `block in action'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/query_cache.rb:36:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activerecord-4.0.2/lib/active_record/migration.rb:369:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:373:in `_run__3313526131724120180__call__callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/activesupport-4.0.2/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/engine.rb:511:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/railties-4.0.2/lib/rails/application.rb:97:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/chihiro/.rvm/gems/ruby-2.1.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+/Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered data/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 806ms
+
+ActionView::Template::Error (/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:4: syntax error, unexpected '}', expecting '='
+...es.map {|m| m["name"], m["id"]}) );@output_buffer.safe_appen...
+...                               ^
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting '}'
+/Users/chihiro/git/ieiriPoster/app/views/data/index.html.erb:10: syntax error, unexpected keyword_end, expecting '}'):
+    1: <h1>ポスター未貼付データCSVダウンロード</h1>
+    2: 
+    3: <form action="<%= url_for controller: 'data', action: 'download', format: :csv %>" method="POST">
+    4:   <%= select_tag 'category', options_for_select(@categories.map {|m| m["name"], m["id"]}) %>
+    5:   <!-- <input type="text" name="date" value="<%= Time.now.strftime('%Y/%m/%d') %>" /> <- 要らない？ <br /> -->
+    6:   <input type="submit" value="ダウンロード" />
+    7: </form>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__1282703890981346001__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__3313526131724120180__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/chihiro/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:32:49 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 844ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 19:32:50 +0900
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-28 19:32:50 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 19:32:50 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-28 19:32:50 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 19:32:50 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 19:32:50 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 19:32:50 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-28 19:32:50 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 19:32:50 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-28 19:32:50 +0900
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 19:33:20 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"all"}
+  Rendered text template (0.0ms)
+Sent data  (1.2ms)
+Completed 200 OK in 856ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 19:33:25 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"42"}
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 1107ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-28 19:36:27 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 2150ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-28 19:36:29 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-28 19:36:29 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-28 19:36:29 +0900
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-28 19:36:29 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-28 19:36:29 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-28 19:36:29 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-28 19:36:29 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-28 19:36:29 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-28 19:36:29 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-28 19:36:29 +0900
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 19:36:35 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"all"}
+http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=open&key=026f83f7a75f8b9add3bfdf623794bb69073cebc
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 836ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 19:36:42 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"42"}
+http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=open&key=026f83f7a75f8b9add3bfdf623794bb69073cebc&category_id=42
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 863ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 19:36:52 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"42"}
+http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=open&key=026f83f7a75f8b9add3bfdf623794bb69073cebc&category_id=42
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 874ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 19:37:03 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"all"}
+http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=open&key=026f83f7a75f8b9add3bfdf623794bb69073cebc
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 825ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 19:37:50 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"42"}
+http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=close&key=026f83f7a75f8b9add3bfdf623794bb69073cebc&category_id=42
+  Rendered text template (0.0ms)
+Sent data  (9.5ms)
+Completed 200 OK in 994ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 19:38:13 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"all"}
+http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=close&key=026f83f7a75f8b9add3bfdf623794bb69073cebc
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 836ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 19:38:24 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"39"}
+http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=close&key=026f83f7a75f8b9add3bfdf623794bb69073cebc&category_id=39
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 827ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-28 19:38:36 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"26"}
+http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=close&key=026f83f7a75f8b9add3bfdf623794bb69073cebc&category_id=26
+  Rendered text template (0.0ms)
+Sent data  (0.4ms)
+Completed 200 OK in 3693ms (Views: 0.4ms | ActiveRecord: 0.0ms)
