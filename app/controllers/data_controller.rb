@@ -7,6 +7,8 @@ class DataController < ApplicationController
   skip_before_filter :verify_authenticity_token ,:only=>[:download]
   # before_action :set_datum, only: [:show, :edit, :update, :destroy]
 
+  LIMIT=100
+
   def index
   	categoriesJson = JSON.parser.new(open(Settings.shirasete_api.issue_categories).read).parse
   	@categories = categoriesJson['issue_categories'].unshift({"name" => "全体", "id" => "all" })
@@ -19,17 +21,29 @@ class DataController < ApplicationController
   		urlParam = "&category_id=#{category}"
   	end
 
-  	# call api
-  	url = Settings.shirasete_api.open_issues + urlParam
-  	logger.debug url
-	json = JSON.parser.new(open(url).read)
+	totalCount = getTotalCount(urlParam)
+	loopCount = (totalCount.to_f / LIMIT).ceil
+	logger.debug "totalCount : #{totalCount}, loopCount : #{loopCount}, limit: #{LIMIT}"
 
   	# generate csv data
   	header = %w(エリア 住所 住所詳細)
   	csvData = CSV.generate(headers: header, write_headers: true, force_quotes: true) do | csv | 
-		json.parse['issues'].each do | issue | 
-			csv << [issue['category']['name'], issue['description'], issue['subject']] #, issue['geometry']["coordinates"]
-		end  		
+
+		(0..(loopCount - 1)).each do | count |
+
+		  	# call api
+		  	url = Settings.shirasete_api.open_issues + urlParam + "&limit=#{LIMIT}&offset=#{count * LIMIT}"
+		  	logger.debug url
+			json = JSON.parser.new(open(url).read)
+
+			json.parse['issues'].each do | issue | 
+				area = issue['category'].nil? ? '' : issue['category']['name'].gsub(/\r\n|\r|\n/, " ")
+				description = issue['description'].gsub(/\r\n|\r|\n/, " ")
+				subject = issue['subject'].gsub(/\r\n|\r|\n/, " ")
+				csv << [area, description, subject] #, issue['geometry']["coordinates"]
+			end  		
+
+	  end
   	end
   	csvData.encode(Encoding::SJIS)
 
@@ -38,4 +52,13 @@ class DataController < ApplicationController
 
   end
 
+  private 
+
+  def getTotalCount(urlParam = nil)
+
+  	url = Settings.shirasete_api.open_issues + urlParam + "&limit=1"
+	json = JSON.parser.new(open(url).read)
+	totalCount = json.parse['total_count'].to_i
+
+  end
 end
