@@ -26,7 +26,7 @@ class DataController < ApplicationController
 	logger.debug "totalCount : #{totalCount}, loopCount : #{loopCount}, limit: #{LIMIT}"
 
   	# generate csv data
-  	header = %w(エリア 住所 住所詳細)
+  	header = %w(エリア 自治体名-投票区-掲示板番号 住所)
   	csvData = CSV.generate(headers: header, write_headers: true, force_quotes: true) do | csv | 
 
 		(0..(loopCount - 1)).each do | count |
@@ -40,7 +40,7 @@ class DataController < ApplicationController
 				area = issue['category'].nil? ? '' : issue['category']['name'].gsub(/\r\n|\r|\n/, " ")
 				description = issue['description'].gsub(/\r\n|\r|\n/, " ")
 				subject = issue['subject'].gsub(/\r\n|\r|\n/, " ")
-				csv << [area, description, subject] #, issue['geometry']["coordinates"]
+				csv << [area, subject, description] #, issue['geometry']["coordinates"]
 			end  		
 
 	  end
