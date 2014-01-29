@@ -46,7 +46,7 @@ class DataController < ApplicationController
   	end
   	csvData.encode(Encoding::SJIS)
 
-  	filename = getCategoryName(category) + "_" + Time.now.strftime('%Y%m%d%H%M%S') + ".csv" 
+  	filename = getCategoryName(category) + "_" + Time.zone.now.strftime('%Y%m%d%H%M%S') + ".csv" 
   	# csv to stream 
   	send_data csvData, filename: filename
 
