@@ -5171,3 +5171,319 @@ http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=open&key=02
   Rendered text template (0.0ms)
 Sent data  (0.6ms)
 Completed 200 OK in 12695ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-29 14:18:27 +0900
+Processing by DataController#index as HTML
+Completed 500 Internal Server Error in 1236ms
+
+OpenURI::HTTPError (401 Authorization Required):
+  app/controllers/data_controller.rb:13:in `index'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-29 14:19:01 +0900
+Processing by IndexController#index as HTML
+  Rendered index/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 66ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-29 14:19:01 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-29 14:19:01 +0900
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-29 14:19:01 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-29 14:19:01 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-29 14:19:01 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-29 14:19:01 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-29 14:19:01 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-29 14:19:01 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-29 14:19:01 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-29 14:19:01 +0900
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-29 14:19:03 +0900
+Processing by DataController#index as HTML
+Completed 500 Internal Server Error in 647ms
+
+OpenURI::HTTPError (401 Authorization Required):
+  app/controllers/data_controller.rb:13:in `index'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.4ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-29 14:19:03 +0900
+Processing by DataController#index as HTML
+Completed 500 Internal Server Error in 873ms
+
+OpenURI::HTTPError (401 Authorization Required):
+  app/controllers/data_controller.rb:13:in `index'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.3ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-29 14:20:22 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 903ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-29 14:20:24 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-29 14:20:24 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-29 14:20:24 +0900
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-29 14:20:24 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-29 14:20:24 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-29 14:20:24 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-29 14:20:24 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-29 14:20:24 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-29 14:20:24 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-29 14:20:24 +0900
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-29 14:21:42 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 929ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-29 14:21:43 +0900
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-29 14:21:43 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-29 14:21:43 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-29 14:21:43 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-29 14:21:43 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-29 14:21:43 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-29 14:21:43 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-29 14:21:43 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-29 14:21:43 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-29 14:21:43 +0900
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-29 14:27:11 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"all"}
+totalCount : 236, loopCount : 3, limit: 100
+http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=open&key=026f83f7a75f8b9add3bfdf623794bb69073cebc&limit=100&offset=0&sort=category,id
+http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=open&key=026f83f7a75f8b9add3bfdf623794bb69073cebc&limit=100&offset=100&sort=category,id
+http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=open&key=026f83f7a75f8b9add3bfdf623794bb69073cebc&limit=100&offset=200&sort=category,id
+  Rendered text template (0.0ms)
+Sent data  (4.8ms)
+Completed 200 OK in 37877ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/data/index" for 127.0.0.1 at 2014-01-29 14:29:58 +0900
+Processing by DataController#index as HTML
+  Rendered data/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 2312ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-29 14:30:00 +0900
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-01-29 14:30:00 +0900
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-29 14:30:00 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-29 14:30:00 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-29 14:30:00 +0900
+
+
+Started GET "/assets/data.css?body=1" for 127.0.0.1 at 2014-01-29 14:30:00 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-29 14:30:00 +0900
+
+
+Started GET "/assets/data.js?body=1" for 127.0.0.1 at 2014-01-29 14:30:00 +0900
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2014-01-29 14:30:00 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-29 14:30:00 +0900
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-29 14:30:01 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"all"}
+totalCount : 0, loopCount : 0, limit: 100
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 1946ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-29 14:30:35 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"all"}
+totalCount : 0, loopCount : 0, limit: 100
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 2503ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-29 14:33:28 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"all"}
+totalCount : 0, loopCount : 0, limit: 100
+  Rendered text template (0.0ms)
+Sent data 全体_20140129143331.csv (0.8ms)
+Completed 200 OK in 2144ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-29 14:33:52 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"42"}
+totalCount : 0, loopCount : 0, limit: 100
+Completed 500 Internal Server Error in 1719ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/data_controller.rb:72:in `getCategoryName'
+  app/controllers/data_controller.rb:49:in `download'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.9ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-29 14:35:05 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"42"}
+totalCount : 0, loopCount : 0, limit: 100
+id : 42
+Completed 500 Internal Server Error in 1713ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/data_controller.rb:72:in `getCategoryName'
+  app/controllers/data_controller.rb:49:in `download'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-29 14:35:43 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"42"}
+totalCount : 0, loopCount : 0, limit: 100
+id : 42, String
+Completed 500 Internal Server Error in 1872ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/data_controller.rb:72:in `getCategoryName'
+  app/controllers/data_controller.rb:49:in `download'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.9ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-29 14:36:05 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"42"}
+totalCount : 0, loopCount : 0, limit: 100
+id : 42, String
+Completed 500 Internal Server Error in 1653ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/data_controller.rb:72:in `getCategoryName'
+  app/controllers/data_controller.rb:49:in `download'
+
+
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/chihiro/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-29 14:36:24 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"42"}
+totalCount : 0, loopCount : 0, limit: 100
+id : 42, String
+  Rendered text template (0.0ms)
+Sent data 三宅村_20140129143625.csv (0.8ms)
+Completed 200 OK in 1781ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/data/download.csv" for 127.0.0.1 at 2014-01-29 14:36:43 +0900
+Processing by DataController#download as CSV
+  Parameters: {"category"=>"27"}
+totalCount : 0, loopCount : 0, limit: 100
+id : 27, String
+  Rendered text template (0.0ms)
+Sent data 世田谷区_20140129143645.csv (0.5ms)
+Completed 200 OK in 1782ms (Views: 0.4ms | ActiveRecord: 0.0ms)

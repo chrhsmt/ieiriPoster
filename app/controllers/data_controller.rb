@@ -10,8 +10,7 @@ class DataController < ApplicationController
   LIMIT=100
 
   def index
-  	categoriesJson = JSON.parser.new(open(Settings.shirasete_api.issue_categories).read).parse
-  	@categories = categoriesJson['issue_categories'].unshift({"name" => "全体", "id" => "all" })
+  	@categories = getCategories
   end
 
   def download
@@ -47,8 +46,9 @@ class DataController < ApplicationController
   	end
   	csvData.encode(Encoding::SJIS)
 
+  	filename = getCategoryName(category) + "_" + Time.now.strftime('%Y%m%d%H%M%S') + ".csv" 
   	# csv to stream 
-  	send_data csvData
+  	send_data csvData, filename: filename
 
   end
 
@@ -61,4 +61,16 @@ class DataController < ApplicationController
 	totalCount = json.parse['total_count'].to_i
 
   end
+
+  def getCategories
+  	categoriesJson = JSON.parser.new(open(Settings.shirasete_api.issue_categories).read).parse
+  	categoriesJson['issue_categories'].unshift({"name" => "全体", "id" => "all" })
+  end
+
+  def getCategoryName(id)
+  	logger.debug "id : #{id}, #{id.class}"
+  	getCategories.select {|m| m["id"].to_s == id}.first["name"]
+
+  end
+
 end
