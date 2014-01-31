@@ -52,8 +52,6 @@ GEM
     less-rails (2.4.2)
       actionpack (>= 3.1)
       less (~> 2.4.0)
-    less-rails-bootstrap (3.1.0.0)
-      less-rails (~> 2.4.2)
     libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -129,7 +127,7 @@ DEPENDENCIES
   execjs
   jbuilder (~> 1.2)
   jquery-rails
-  less-rails-bootstrap
+  less-rails
   pg
   rails (= 4.0.2)
   sdoc
