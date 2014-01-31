@@ -13,8 +13,8 @@ group :development, :test do
 end
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
-# gem 'less-rails'
+# gem 'sass-rails', '~> 4.0.0'
+gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'execjs'
 
