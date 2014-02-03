@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<title>[ インターネッ党 ] : 2014年都知事選挙 期日前投票所MAP</title>
 	<style type="text/css">
 	html { height: 100% }
 	body { height: 100%; margin: 0; padding: 0 }
@@ -14,6 +15,7 @@
 	<script type="text/javascript">
 
 var startLocation;
+var map;
 function initialize() {
 	setStartLocation();
 	var mapOptions = {
@@ -21,11 +23,13 @@ function initialize() {
 		zoom: 10,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
-	var map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
+	map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
 		for(var i = 0;i< points.length;i++){
 			point(points[i],map);
 		};
+	map.panTo(new google.maps.LatLng(35.308401,136.131592));
 }
+
 function point(arr,map){
 	var Latlng = new google.maps.LatLng(arr[2],arr[3]);
 	var marker = new google.maps.Marker(
@@ -50,23 +54,39 @@ function myroute(target){
     location.href = url;
 }
 function setStartLocation(){
+	console.log("setStartLocation start.")
   if(navigator.geolocation){
+	console.log("use navigator.geolocation.")
   	browserSupportGetlocationFlag = true;
     navigator.geolocation.getCurrentPosition(function(position) {
+    	console.log("getCurrentPosition success.");
+
       startLocation = new google.maps.LatLng(
       	position.coords.latitude,position.coords.longitude);
+      map.panTo(new google.maps.LatLng(position.coords.latitude,position.coords.longitude));
+      map.setZoom(15);
     }, function(error) {
       handleNoGeolocation(browserSupportGetlocationFlag,error);
-    }, {enableHighAccuracy:true}
+    }, {
+    	enableHighAccuracy: true,
+    	timeout: 10000
+    }
     );
-  }else if (google.gears) {
+  } else if (google.gears) {
+	console.log("use google gears.")
     browserSupportGetlocationFlag = true;
     var geo = google.gears.factory.create('beta.geolocation');
     geo.getCurrentPosition(function(position) {
+    	console.log("getCurrentPosition success.");
       startLocation = new google.maps.LatLng(position.latitude,position.longitude);
+      map.panTo(new google.maps.LatLng(position.coords.latitude,position.coords.longitude));
+      map.setZoom(15);
     }, function(error) {
       handleNoGeoLocation(browserSupportGetlocationFlag,error);
-    }, {enableHighAccuracy:true}
+    }, {
+    	enableHighAccuracy: true,
+    	timeout: 10000
+    }
     );
   }else {
     browserSupportGetlocationFlag = false;
@@ -74,13 +94,18 @@ function setStartLocation(){
   }
 
 	function handleNoGeolocation(errorFlag,error) {
-		alert("error flag="+ errorFlag);
+		console.log("error flag="+ errorFlag);
 	    if (errorFlag == true) {
-	      alert("ブラウザはgeolocationをサポートしています"+
-	          ': '+ error.code+ '\n'+': ' + error.message+'\n');
+	      console.log("ブラウザはgeolocationをサポートしています" +
+	          ': ' + error.code + '\n' + ': ' + error.message+'\n');
+	      if (error.code == 2) {
+	      	alert("現在位置が特定できませんでした")
+	      } else if (error.code == 3) {
+	      	console.log("timeout")
+	      }
 	      startLocation = new google.maps.LatLng(34.73348,135.500109);
 	    } else {
-	      alert("geolocationのサポート外");
+	      console.log("geolocationのサポート外");
 	      startLocation = new google.maps.LatLng(34.73348,135.500109);
 	    }
 	}

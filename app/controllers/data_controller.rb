@@ -1,6 +1,8 @@
 require 'csv'
 require 'json'
 require 'open-uri'
+require 'nkf'
+require 'kconv'
 
 class DataController < ApplicationController
 
@@ -20,19 +22,21 @@ class DataController < ApplicationController
   		urlParam = "&category_id=#{category}"
   	end
 
-	totalCount = getTotalCount(urlParam)
-	loopCount = (totalCount.to_f / LIMIT).ceil
-	logger.debug "totalCount : #{totalCount}, loopCount : #{loopCount}, limit: #{LIMIT}"
+  	totalCount = getTotalCount(urlParam)
+  	loopCount = (totalCount.to_f / LIMIT).ceil
+  	logger.debug "totalCount : #{totalCount}, loopCount : #{loopCount}, limit: #{LIMIT}"
 
   	# generate csv data
   	header = %w(エリア 自治体名-投票区-掲示板番号 住所)
-  	csvData = CSV.generate(headers: header, write_headers: true, force_quotes: true) do | csv | 
+    encoding = isMac ? 'utf-8' : 'sjis'
+  	csvData = CSV.generate(headers: header, write_headers: true, force_quotes: true, encoding: encoding) do | csv | 
 
 		(0..(loopCount - 1)).each do | count |
 
-		  	# call api
-		  	url = Settings.shirasete_api.open_issues + urlParam + "&limit=#{LIMIT}&offset=#{count * LIMIT}&sort=category,id"
-		  	logger.debug url
+
+		  # call api
+		  url = Settings.shirasete_api.open_issues + urlParam + "&limit=#{LIMIT}&offset=#{count * LIMIT}&sort=category,id"
+		  logger.debug url
 			json = JSON.parser.new(open(url).read)
 
 			json.parse['issues'].each do | issue | 
@@ -40,11 +44,15 @@ class DataController < ApplicationController
 				description = issue['description'].gsub(/\r\n|\r|\n/, " ")
 				subject = issue['subject'].gsub(/\r\n|\r|\n/, " ")
 				csv << [area, subject, description] #, issue['geometry']["coordinates"]
+        # csv << [NKF.nkf('-W -s', area), NKF.nkf('-W -s', subject), NKF.nkf('-W s', description)] #, issue['geometry']["coordinates"]
 			end  		
 
 	  end
   	end
-  	csvData.encode(Encoding::SJIS)
+    if !isMac
+    	# csvData.encode(Encoding::SJIS)
+      csvData = csvData.tosjis
+    end
 
   	filename = getCategoryName(category) + "_" + Time.zone.now.strftime('%Y%m%d%H%M%S') + ".csv" 
   	# csv to stream 
@@ -73,4 +81,11 @@ class DataController < ApplicationController
 
   end
 
+  def isMac
+    if request.env['HTTP_USER_AGENT'].downcase.match(/macintosh/)
+      true
+    else
+      false
+    end
+  end
 end
