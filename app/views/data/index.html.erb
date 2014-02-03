@@ -1,7 +1,12 @@
 <h1>ポスター未貼付データCSVダウンロード</h1>
-
+<br />
 <form action="<%= url_for controller: 'data', action: 'download', format: :csv %>" method="POST">
   <%= select_tag 'category', options_for_select(@categories.map {|m| [m["name"], m["id"]] }) %>
   <!-- <input type="text" name="date" value="<%= Time.now.strftime('%Y/%m/%d') %>" /> <- 要らない？ <br /> -->
   <input type="submit" value="ダウンロード" />
 </form>
+<ol>
+	<li>上記リストから出力対象の市区町村を選択してください。CSVファイルがダウンロードされます。</li>
+	<li>ダウンロードしたCSVファイルをexcelなどの表計算ソフトで開きます。</li>
+	<li>プリンタで印刷して完了。</li>
+</ol>
