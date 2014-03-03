@@ -23,7 +23,7 @@
 - 以下のコマンドを実行
 
 ```
-> SHIRASETE_API_KEY=取得したAPIキー bundle exec rails server
+> SHIRASETE_PROJECT_ID=対象プロジェクトID SHIRASETE_API_KEY=取得したAPIキー bundle exec rails server
 ```
 
 
