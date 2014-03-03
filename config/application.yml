@@ -1,8 +1,8 @@
 defaults: &defaults
 
   shirasete_api:
-    open_issues: http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=open&sort=id&key=<%= "#{ENV['OSHIETE_API_KEY']}" %>
-    issue_categories: http://beta.shirasete.jp/projects/ieiri-poster/issue_categories.json?key=<%= "#{ENV['OSHIETE_API_KEY']}" %>
+    open_issues: http://beta.shirasete.jp/projects/ieiri-poster/issues.json?status_id=open&key=<%= "#{ENV['SHIRASETE_API_KEY']}" %>
+    issue_categories: http://beta.shirasete.jp/projects/ieiri-poster/issue_categories.json?key=<%= "#{ENV['SHIRASETE_API_KEY']}" %>
 
 development:
   <<: *defaults
