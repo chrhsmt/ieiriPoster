@@ -1,4 +1,4 @@
-家入一真ポスター管理
+選挙ポスター管理
 ===========
 
 
@@ -12,9 +12,9 @@
 ----------------
 
 ```
-> git clone https://github.com/open-election/ieiriPoster.git
-> cd ieiriPoster
-> bundle install --path vendor/bundle
+> git clone https://github.com/open-election/poster-manager.git
+> cd poster-manager
+> bundle install
 ```
 
 動かし方
