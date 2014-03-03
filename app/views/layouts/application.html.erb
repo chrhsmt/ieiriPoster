@@ -64,7 +64,7 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">menu</li>
-              <li><%= link_to "ポスター貼り進捗管理マップ", "http://beta.shirasete.jp/projects/ieiri-poster/issues/report/category", target: 'blank'  %></li>
+              <li><%= link_to "ポスター貼り進捗管理マップ", "http://beta.shirasete.jp/projects/#{ENV['SHIRASETE_PROJECT_ID']}/issues/report/category", target: 'blank'  %></li>
               <li><%= link_to "未貼り付けデータdownload", data_index_path  %></li>
               <!-- <li><%= link_to "Link3", "/path3"  %></li> -->
             </ul>

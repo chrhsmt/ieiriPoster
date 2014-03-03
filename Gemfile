@@ -6,7 +6,7 @@ gem 'rails', '4.0.2'
 group :development do 
     gem 'better_errors'
     gem 'binding_of_caller'
-    gem 'rails-footnotes'
+    gem 'rails-footnotes', github: 'josevalim/rails-footnotes'
 end
 
 group :production do
