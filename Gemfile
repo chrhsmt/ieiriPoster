@@ -3,10 +3,20 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+group :development do 
+    gem 'better_errors'
+    gem 'binding_of_caller'
+    gem 'rails-footnotes'
+end
+
 group :production do
   gem 'pg'
 end
+
 group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-doc'
+
 # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   gem 'sqlite3-ruby', :require => 'sqlite3'
@@ -43,14 +53,4 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'thin'
