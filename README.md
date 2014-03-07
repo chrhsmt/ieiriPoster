@@ -26,6 +26,15 @@
 > SHIRASETE_PROJECT_ID=対象プロジェクトID SHIRASETE_API_KEY=取得したAPIキー bundle exec rails server
 ```
 
+### heroku
+
+```
+> heroku create apps
+> heroku config:add SECRET_TOKEN=`bundle exec rake secret`
+> heroku config:add SHIRASETE_API_KEY="APIキー"
+> heroku config:add SHIRASETE_PROJECT_ID="プロジェクトID"
+> git push heroku master
+```
 
 LICENSE
 -------
